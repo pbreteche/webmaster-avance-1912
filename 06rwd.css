@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Pixel Emulator';
+    src: url('/font/PixelEmulator-xq08.ttf');
+}
+
 body {
     margin: 0;
 }
@@ -13,6 +18,7 @@ img, embed, video, object, audio {
 }
 
 .header h1 {
+    font-family: 'Pixel Emulator', monospace;
     border-bottom: .5em solid white;
     border-right: 1em solid transparent;
 }
