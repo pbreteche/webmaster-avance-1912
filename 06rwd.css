@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+}
+
+img, embed, video, object, audio {
+    max-width: 100%;
+}
+
+.header {
+    background-color: cadetblue;
+    padding: 1em 10%;
+    color: white;
+}
+
+.header h1 {
+    border-bottom: .5em solid white;
+    border-right: 1em solid transparent;
+}
+
+.main {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap; 
+}
+
+.main > * {
+    flex: 1 0 100%;
+}
+
+.viewer {
+    box-sizing: border-box;
+    border: solid .5em darkorange;
+    text-align: center;
+    background: 
+        top left / 10% 10% repeat-y repeating-linear-gradient(to bottom, black, black 10px, white 10px, white 20px),
+        top right / 10% 10% repeat-y repeating-linear-gradient(to bottom, black, black 10px, white 10px, white 20px)
+    ;
+}
+
+.viewer img {
+     max-height: 20em; 
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.menu a {
+    display: block;
+    cursor: pointer;
+}
+
+.menu img {
+    transition: all 400ms;
+    max-height: 5em;
+}
+
+.menu a:hover img {
+    transform: scale(1.5);
+    z-index: 1000;
+}
+
+footer {
+    background: #333;
+    color: #ccc;
+    padding: 1em 10%;
+}
+
+@media screen and (min-width: 768px) {
+    .viewer, .main nav {
+        box-sizing: border-box;
+        width: 50%;
+        flex: 1 0;
+    }
+}

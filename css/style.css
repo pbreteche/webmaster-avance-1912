@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "Gothic Joker";
+    src: url('/font/GothicJoker-gxxGP.ttf') format('truetype');
+}
+
+.demo-margin1 {
+    background-color: chocolate;
+    padding: 1em 0;
+}
+
+.demo-margin2 {
+    background-color: chocolate;
+}
+
+.page-title {institutionnel-accueil.gif
+    font-family: "Gothic Joker", sans-serif;
+    font-size: 4em;
+}
+
+.demo1 {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.demo1 > li {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}
+
+.demo1 > li:nth-child(3) {
+    background-color: chartreuse;
+    order: -1;
+    flex-grow: 2;
+}
+
+.demo1 > li:nth-child(4n+2) {
+    background-color: red; 
+    flex-grow: 1;
+}
+
+#demo-li-id {
+    background-color: orange;
+}
+
+.demo2 > p:nth-of-type(4) {
+    background-color: cyan;
+}
+
+a[href] {
+    color: green;
+}
+
+a[href="dawan.fr"] {
+    color: red;
+}
+
+a {
+    cursor: pointer;
+}
+
+p.demo3 {
+    color: brown;
+    width: 150px;
+}
+
+.demo3 strong {
+    display: inline-block;
+    width: inherit;
+}

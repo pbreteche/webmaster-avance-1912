@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulaire</title>
+</head>
+<body>
+    <h1>Formulaire</h1>
+    <form action="/traitement.php">
+        <div>
+            <label for="demo-email">Email</label>
+            <input type="email" id="demo-email">
+        </div>
+        <div>
+            <label for="demo-url">Url</label>
+            <input type="url" id="demo-url" required name="demo-url">
+        </div>
+        <div>
+            <label for="demo-color">Couleur</label>
+            <input type="color" id="demo-color">
+        </div>
+        <div>
+            <label for="demo-number">Nombre</label>
+            <input type="number" id="demo-number">
+        </div>
+        <div>
+            <label for="demo-code-postal">Code postal</label>
+            <input type="text" id="demo-code-postal" pattern="[0-9]{5}">
+        </div>
+        <div>
+            <label for="demo-date">Date</label>
+            <input type="date" id="demo-date" autocomplete="bday">
+        </div>
+        <div>
+            <label for="demo-datetime">Date et heure</label>
+            <input type="datetime" id="demo-datetime">
+        </div>
+        <select name="" id="">
+            <option>1960</option>
+            <option>1961</option>
+        </select>
+        <div>
+            <label for="demo-select-langue">Langue</label>
+            <select name="select-langue" id="demo-select-langue">
+                <option value="fr">Français</option>
+                <option value="en">Anglais</option>
+            </select>
+        </div>
+        <div>
+            <label for="demo-ville">Ville</label>
+            <input type="text" list="demo-villes" id="demo-ville">
+            <datalist id="demo-villes">
+                <option value="Nantes">
+                <option value="Nanterre">
+                <option value="Nancy">
+                <option value="Narbonne">
+            </datalist>
+        </div>
+        <button>Envoyer</button>
+    </form>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.8103214176595!2d2.3163891158782475!3d48.842756609761054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671ccb16540b5%3A0xb94e60afcc950426!2sDawan!5e0!3m2!1sen!2sfr!4v1575301010123!5m2!1sen!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+</body>
+</html>
