@@ -1,0 +1,48 @@
+h1, dl {
+    background: lightcyan;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu button {
+    background: greenyellow;
+    border: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.menu > li {
+    flex: 1 0 100%;
+}
+
+.menu ul {
+    background: #333;
+    color: lightgrey;
+    list-style-type: none;
+    padding: .5em;
+    display: none;
+}
+.menu ul.active {
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    .menu {
+        justify-content: end;
+    }
+    .menu > li {
+        min-width: 20ch;
+        flex: 0 0 auto;
+        position: relative;
+    }  
+    .menu ul {
+        position: absolute;
+        left: 0; right: 0;
+    }
+}
