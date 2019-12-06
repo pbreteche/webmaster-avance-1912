@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drag n drop</title>
+    <style>
+.drop-zone {
+    width: 500px;
+    height: 500px;
+    border: 5px dashed black;
+}
+
+.draggable {
+    width: 50px;
+    height: 50px;
+    background: tomato;
+} 
+    </style>
+</head>
+<body> 
+    <div>
+        <div class="draggable" draggable="true">
+            contenu avec du texte
+        </div>
+        <div class="drop-zone"></div>
+    </div>
+    <script>
+document.addEventListener('DOMContentLoaded', function(){
+    const draggableDiv = document.querySelector('.draggable');
+    const dropZone = document.querySelector('.drop-zone');
+    console.log(dropZone);
+
+    draggableDiv.addEventListener('dragstart', function(event){
+        event.dataTransfer.setData('text/plain', this.textContent);
+    });
+
+
+    dropZone.addEventListener('dragover', function(event){
+        this.style.backgroundColor = 'yellow';
+        event.preventDefault();
+    });
+
+    dropZone.addEventListener('dragout', function(){
+        this.style.backgroundColor = 'white';
+    });
+        
+    dropZone.addEventListener('drop', function(event){
+        console.log(this);
+        console.log(event);
+        event.preventDefault();
+        this.textContent = event.dataTransfer.getData('text');
+    });
+});
+    </script>
+</body>
+</html>
