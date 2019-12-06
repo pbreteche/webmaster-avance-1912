@@ -13,3 +13,5 @@ clickButton.addEventListener('click', function(){
     // ++clickCount;
     window.localStorage.setItem('click-count', clickCount);
 });
+
+window.sessionStorage // se vide automatiquement à la fermeture de la fenêtre
